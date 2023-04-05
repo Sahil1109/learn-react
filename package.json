@@ -3,24 +3,44 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.5",
+    "@mui/styled-engine-sc": "^5.10.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.2",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
+    "styled-components": "^5.3.5",
+    "web-vitals": "^2.1.4",
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^16.1.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "prettier": "^2.6.1",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.23",
     "@types/react": "^18.0.33",
-    "@types/react-dom": "^18.0.11",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "@types/react-dom": "^18.0.11"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "cross-env prettier --write 'src/**/*.{ts,tsx,stories.tsx}'",
+    "format:check": "cross-env prettier --check 'src/**/*.{ts,tsx,stories.tsx}'",
+    "lint": "cross-env eslint 'src/**/*.{ts,tsx}' --quiet --fix",
+    "lint:check": "cross-env eslint 'src/**/*.{ts,tsx}' --quiet",
+    "typecheck": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [
